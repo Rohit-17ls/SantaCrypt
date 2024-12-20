@@ -5,9 +5,9 @@ const Home = () => {
     const navigate = useNavigate();
 
   return (
-    <section className="h-fit mt-[50px] mx-auto p-4 max-w-[1200px] min-w-[290px]">
+    <section className="h-fit mt-[30px] mx-auto p-4 max-w-[1200px] min-w-[290px]">
         <h1 className="text-5xl font-bold my-5">SantaCrypt - Secret Santa for cliques</h1>
-        <p className="text-3xl text-start">
+        <p className="text-2xl text-start">
             Create your <strong className="link important underline" onClick={() => navigate("/create")}>Clique</strong> and exchange gifts with ease. <strong className="important">No login/signup required.</strong> Quit having to draw from a jar of names or signing up with your email elsewhere.</p>
 
         <h2 className="text-3xl text-start font-bold mt-[60px] mb-3">How it works?</h2>
