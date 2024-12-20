@@ -61,6 +61,7 @@ const Clique = () => {
             setIsFetching(false);
             if(res.status !== 200) {
                 setFailureMessage((await res.json()).body.message);
+                return;
             }
             
             const result = await res.json();
@@ -96,7 +97,7 @@ const Clique = () => {
         {(!isFetching && !failureMessage) && 
             <div className='m-auto max-w-[800px] min-w-[200px] flex flex-col gap-4'>
                 <h1 className="text-4xl">Secret Santa Mapping</h1>
-                <p>Decrypt with private keys from (Choose the ECB/OAEP/SHA256 algorithm)<a href="https://emn178.github.io/online-tools/rsa/decrypt/"><strong className="important link underline">here</strong></a></p>
+                <p>Decrypt with private keys from (Choose the ECB/OAEP/SHA256 algorithm) <a href="https://emn178.github.io/online-tools/rsa/decrypt/"><strong className="important link underline">here</strong></a></p>
                 
                 <table className="w-fit max-w-fit min-w-[200px] overflow-x-scroll border-1 border-solid border-x-white">
                     <tbody>
