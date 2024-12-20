@@ -157,24 +157,24 @@ const CreateClique = () => {
         {errors.cliqueDataError && <p className="error my-1">Verify that all names and public keys are correct</p>}
         {errors.cliqueCreateError && <p className="error my-1">Failed to create Clique. Check again to ensure that the publics are corectly formatted (PEM format) everywhere</p>}
 
-        <dialog ref={infoRef} className="w-1/2 min-w-[270px] bg-[#181414] p-3 border-[1px] border-solid border-white">
+        <dialog ref={infoRef} className="w-1/2 min-w-[300px] overflow-scroll h-2/3 bg-[#181414] p-3 border-[1px] border-solid border-white">
             <div>
                 <span className="block text-end clickable" onClick={() => {infoRef.current?.close()}}>🗙</span>
                 
                 <h1 className="text-3xl font-semibold mb-3">Public Key</h1>
                 <p className="m-2 text-start">The public key must be a 2048-bit key in PEM format (Make sure you have the corresponding private key for decryption). You can generate a key-pair here <a href="https://emn178.github.io/online-tools/rsa/key-generator/"><strong className="underline important link">here</strong></a> (use PKCS#8 format). Here is an example of a public key in PEM format:</p>
                 
-                <pre className="font-mono text-start p-4">
+                <div className="font-mono text-start p-4 text-wrap">
                 -----BEGIN PUBLIC KEY-----<br/>
-                MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyH/z7uQ0HgWcuHtNloyO<br/>
-                9tlOnsrpkftxAPbM9yCenS6pJBo7sgAPaJh9NbTxjZmQR62pXN6pdcmaid+GRJ4D<br/>
-                E2eEzCON8kxIhA++H7wK7D6VKTfgl7uPENjBIHDdrU+SohcRImqgiyHFBDBXGnSy<br/>
-                FSZlkAjZNPS7/2gT8U15NVJpC9A4C9Ip89Stlz2FvHVM/B2mKnPYv0THXPBirij8<br/>
-                5zYndkfE961t8/MnvI6KYtMtrxJmnvklO4ea2tUNZEz9JzzT4xJMKYklCEJcI3PW<br/>
-                K/hYNKCPEvVHT60/cmTpwetPok/jPsLW0Seq2f2y+FcWTSOIaXnooWzPOqV/ORog<br/>
-                KQIDAQAB<br/>
+                <p className="wrap-anywhere">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyH/z7uQ0HgWcuHtNloyO</p>
+                <p className="wrap-anywhere">9tlOnsrpkftxAPbM9yCenS6pJBo7sgAPaJh9NbTxjZmQR62pXN6pdcmaid+GRJ4D</p>
+                <p className="wrap-anywhere">E2eEzCON8kxIhA++H7wK7D6VKTfgl7uPENjBIHDdrU+SohcRImqgiyHFBDBXGnSy</p>
+                <p className="wrap-anywhere">FSZlkAjZNPS7/2gT8U15NVJpC9A4C9Ip89Stlz2FvHVM/B2mKnPYv0THXPBirij8</p>
+                <p className="wrap-anywhere">5zYndkfE961t8/MnvI6KYtMtrxJmnvklO4ea2tUNZEz9JzzT4xJMKYklCEJcI3PW</p>
+                <p className="wrap-anywhere">K/hYNKCPEvVHT60/cmTpwetPok/jPsLW0Seq2f2y+FcWTSOIaXnooWzPOqV/ORog</p>
+                <p className="wrap-anywhere">KQIDAQAB</p>
                 -----END PUBLIC KEY-----
-                </pre>
+                </div>
 
             </div>
         </dialog>

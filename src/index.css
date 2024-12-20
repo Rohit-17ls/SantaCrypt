@@ -58,6 +58,10 @@ table {
   overflow-wrap: anywhere;
 }
 
+.wrap-anywhere {
+  overflow-wrap: anywhere;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
